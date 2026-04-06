@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Products CLÉO</title>
+<title>Makeup Tips</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,32 +15,19 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<h1>Our Products</h1>
-<div class="product-grid">
-  <div class="product-card">
-    <img src="images/foundation.jpg" alt="Foundation">
-    <h3>Foundation</h3>
-    <p>RM45</p>
-    <button onclick="addToCart('Foundation', 45)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="images/lipstick.jpg" alt="Lipstick">
-    <h3>Lipstick</h3>
-    <p>RM30</p>
-    <button onclick="addToCart('Lipstick', 30)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="images/blusher.jpg" alt="Blusher">
-    <h3>Blusher</h3>
-    <p>RM25</p>
-    <button onclick="addToCart('Blusher', 25)">Add to Cart</button>
-  </div>
-</div>
+<h1>Makeup Tips</h1>
+<ul>
+  <li>Cleanse your face</li>
+  <li>Apply foundation</li>
+  <li>Add blusher</li>
+  <li>Apply lipstick</li>
+</ul>
 
-<script>
-function addToCart(name, price){
-  alert(name + " added to cart! Price: RM" + price);
-}
-</script>
+<h2>Tutorial Videos</h2>
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/g6geutlCWjM" width="560" height="315" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/az0jo3dLtFY" width="560" height="315" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/k0aXrjr3TKo" width="560" height="315" allowfullscreen></iframe>
+</div>
 </body>
 </html>
