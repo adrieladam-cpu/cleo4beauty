@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Makeup Tips</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Products CLÉO</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -17,23 +15,32 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<h1>Makeup Tips</h1>
-
-<p>Follow these simple steps for a perfect makeup look:</p>
-<ul>
-  <li>Cleanse your face</li>
-  <li>Apply foundation</li>
-  <li>Add blusher</li>
-  <li>Apply lipstick</li>
-</ul>
-
-<h2>Tutorial Videos</h2>
-
-<div class="video-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/g6geutlCWjM?si=W54yqzQTImR1S8yf" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/az0jo3dLtFY?si=l9hVBxTHMCxeK07B" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/k0aXrjr3TKo?si=uqCFAP9qpCRUODq7" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+<h1>Our Products</h1>
+<div class="product-grid">
+  <div class="product-card">
+    <img src="images/foundation.jpg" alt="Foundation">
+    <h3>Foundation</h3>
+    <p>RM45</p>
+    <button onclick="addToCart('Foundation', 45)">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="images/lipstick.jpg" alt="Lipstick">
+    <h3>Lipstick</h3>
+    <p>RM30</p>
+    <button onclick="addToCart('Lipstick', 30)">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="images/blusher.jpg" alt="Blusher">
+    <h3>Blusher</h3>
+    <p>RM25</p>
+    <button onclick="addToCart('Blusher', 25)">Add to Cart</button>
+  </div>
 </div>
 
+<script>
+function addToCart(name, price){
+  alert(name + " added to cart! Price: RM" + price);
+}
+</script>
 </body>
 </html>
