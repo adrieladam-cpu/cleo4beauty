@@ -1,35 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #f8f4f2;
-  text-align: center;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 nav {
-  background-color: #e8dcd5;
+  background-color: #f3ece7;
   padding: 15px;
 }
 
 nav a {
   margin: 10px;
   text-decoration: none;
-  color: black;
+  color: #5c4b3a;
   font-weight: bold;
   font-size: 16px;
 }
 
 nav a:hover {
-  color: #b48b7d;
+  color: #a87c6b;
 }
 
 h1 {
-  color: #b48b7d;
+  font-family: 'Playfair Display', serif;
+  color: #a87c6b;
   margin-top: 20px;
 }
 
 h2 {
-  color: #8c5c4b;
+  font-family: 'Playfair Display', serif;
+  color: #94715a;
 }
 
 p {
@@ -40,7 +44,45 @@ p {
 
 img {
   margin: 10px;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.products-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.product {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 220px;
+}
+
+.product button {
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #b48b7d, #d1a18f);
+  color: white;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.product button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #d1a18f, #b48b7d);
 }
 
 form input, form textarea {
