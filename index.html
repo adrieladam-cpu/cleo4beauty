@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CLÉO Beauty</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>CLÉO Beauty</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <nav>
@@ -18,21 +17,41 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<header>
+<header class="hero">
   <h1>CLÉO Beauty</h1>
   <p>Enhance Your Natural Beauty</p>
+  <a href="products.html" class="btn">Shop Now</a>
 </header>
 
-<section>
-  <img src="images/model.jpg" width="300">
-  <h2>Welcome to CLÉO</h2>
-  <p>CLÉO Beauty is a premium makeup brand designed to enhance your confidence and elegance.</p>
+<section class="featured-products">
+  <h2>Featured Products</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="images/foundation.jpg" alt="Foundation">
+      <h3>Foundation</h3>
+      <p>RM45</p>
+      <button onclick="addToCart('Foundation', 45)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="images/lipstick.jpg" alt="Lipstick">
+      <h3>Lipstick</h3>
+      <p>RM30</p>
+      <button onclick="addToCart('Lipstick', 30)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="images/blusher.jpg" alt="Blusher">
+      <h3>Blusher</h3>
+      <p>RM25</p>
+      <button onclick="addToCart('Blusher', 25)">Add to Cart</button>
+    </div>
+  </div>
 </section>
 
-<section>
-  <h2>Featured Products</h2>
-  <p>Explore our latest collection of high-quality beauty products.</p>
-</section>
+<script>
+function addToCart(name, price){
+  alert(name + " added to cart! Price: RM" + price);
+}
+</script>
 
 </body>
 </html>
