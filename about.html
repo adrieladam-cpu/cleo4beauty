@@ -4,6 +4,91 @@
   <meta charset="UTF-8">
   <title>About CLÉO</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #fff8f5, #fdf2f0);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    nav {
+      background-color: #f3ece7;
+      padding: 15px;
+    }
+
+    nav a {
+      margin: 10px;
+      text-decoration: none;
+      color: #5c4b3a;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #a87c6b;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #a87c6b;
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #94715a;
+      margin-top: 30px;
+    }
+
+    p {
+      color: #333;
+      max-width: 600px;
+      margin: 10px auto;
+    }
+
+    .mission-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+      align-items: center;
+    }
+
+    .mission-item {
+      background-color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 400px;
+      transition: transform 0.3s;
+    }
+
+    .mission-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Glitter / particles */
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, #f5e1d6 0%, #f0b0a1 100%);
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-100px) translateX(50px); }
+      100% { transform: translateY(0) translateX(0); }
+    }
+  </style>
 </head>
 
 <body>
@@ -18,14 +103,319 @@
 </nav>
 
 <h1>About CLÉO</h1>
-
 <p>CLÉO Beauty was created to empower individuals to feel confident and beautiful in their own skin.</p>
 
 <h2>Our Vision</h2>
 <p>To become a leading beauty brand known for quality and elegance.</p>
 
 <h2>Our Mission</h2>
-<p>To provide high-quality makeup products that enhance natural beauty.</p>
+<div class="mission-container">
+  <div class="mission-item">
+    <h3>Great Innovation</h3>
+    <p>Suitable for all members of the family with a wide range of cosmetics products.</p>
+  </div>
+  <div class="mission-item">
+    <h3>High Quality</h3>
+    <p>Premium natural quality components developed by modern cosmetic technology.</p>
+  </div>
+  <div class="mission-item">
+    <h3>Natural and Organic</h3>
+    <p>Produce only natural cosmetics, irrespective of their type and purpose.</p>
+  </div>
+</div>
+
+<!-- Glitter particles -->
+<script>
+  const numParticles = 30;
+  for(let i=0; i<numParticles; i++){
+    const p = document.createElement('div');
+    p.classList.add('particle');
+    p.style.left = Math.random() * window.innerWidth + 'px';
+    p.style.top = Math.random() * window.innerHeight + 'px';
+    p.style.animationDuration = (3 + Math.random() * 5) + 's';
+    document.body.appendChild(p);
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>About CLÉO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #fff8f5, #fdf2f0);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    nav {
+      background-color: #f3ece7;
+      padding: 15px;
+    }
+
+    nav a {
+      margin: 10px;
+      text-decoration: none;
+      color: #5c4b3a;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #a87c6b;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #a87c6b;
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #94715a;
+      margin-top: 30px;
+    }
+
+    p {
+      color: #333;
+      max-width: 600px;
+      margin: 10px auto;
+    }
+
+    .mission-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+      align-items: center;
+    }
+
+    .mission-item {
+      background-color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 400px;
+      transition: transform 0.3s;
+    }
+
+    .mission-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Glitter / particles */
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, #f5e1d6 0%, #f0b0a1 100%);
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-100px) translateX(50px); }
+      100% { transform: translateY(0) translateX(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html">Products</a>
+  <a href="tips.html">Makeup Tips</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<h1>About CLÉO</h1>
+<p>CLÉO Beauty was created to empower individuals to feel confident and beautiful in their own skin.</p>
+
+<h2>Our Vision</h2>
+<p>To become a leading beauty brand known for quality and elegance.</p>
+
+<h2>Our Mission</h2>
+<div class="mission-container">
+  <div class="mission-item">
+    <h3>Great Innovation</h3>
+    <p>Suitable for all members of the family with a wide range of cosmetics products.</p>
+  </div>
+  <div class="mission-item">
+    <h3>High Quality</h3>
+    <p>Premium natural quality components developed by modern cosmetic technology.</p>
+  </div>
+  <div class="mission-item">
+    <h3>Natural and Organic</h3>
+    <p>Produce only natural cosmetics, irrespective of their type and purpose.</p>
+  </div>
+</div>
+
+<!-- Glitter particles -->
+<script>
+  const numParticles = 30;
+  for(let i=0; i<numParticles; i++){
+    const p = document.createElement('div');
+    p.classList.add('particle');
+    p.style.left = Math.random() * window.innerWidth + 'px';
+    p.style.top = Math.random() * window.innerHeight + 'px';
+    p.style.animationDuration = (3 + Math.random() * 5) + 's';
+    document.body.appendChild(p);
+  }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>About CLÉO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #fff8f5, #fdf2f0);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    nav {
+      background-color: #f3ece7;
+      padding: 15px;
+    }
+
+    nav a {
+      margin: 10px;
+      text-decoration: none;
+      color: #5c4b3a;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #a87c6b;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #a87c6b;
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #94715a;
+      margin-top: 30px;
+    }
+
+    p {
+      color: #333;
+      max-width: 600px;
+      margin: 10px auto;
+    }
+
+    .mission-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+      align-items: center;
+    }
+
+    .mission-item {
+      background-color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 400px;
+      transition: transform 0.3s;
+    }
+
+    .mission-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Glitter / particles */
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, #f5e1d6 0%, #f0b0a1 100%);
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-100px) translateX(50px); }
+      100% { transform: translateY(0) translateX(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html">Products</a>
+  <a href="tips.html">Makeup Tips</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<h1>About CLÉO</h1>
+<p>CLÉO Beauty was created to empower individuals to feel confident and beautiful in their own skin.</p>
+
+<h2>Our Vision</h2>
+<p>To become a leading beauty brand known for quality and elegance.</p>
+
+<h2>Our Mission</h2>
+<div class="mission-container">
+  <div class="mission-item">
+    <h3>Great Innovation</h3>
+    <p>Suitable for all members of the family with a wide range of cosmetics products.</p>
+  </div>
+  <div class="mission-item">
+    <h3>High Quality</h3>
+    <p>Premium natural quality components developed by modern cosmetic technology.</p>
+  </div>
+  <div class="mission-item">
+    <h3>Natural and Organic</h3>
+    <p>Produce only natural cosmetics, irrespective of their type and purpose.</p>
+  </div>
+</div>
+
+<!-- Glitter particles -->
+<script>
+  const numParticles = 30;
+  for(let i=0; i<numParticles; i++){
+    const p = document.createElement('div');
+    p.classList.add('particle');
+    p.style.left = Math.random() * window.innerWidth + 'px';
+    p.style.top = Math.random() * window.innerHeight + 'px';
+    p.style.animationDuration = (3 + Math.random() * 5) + 's';
+    document.body.appendChild(p);
+  }
+</script>
 
 </body>
 </html>
