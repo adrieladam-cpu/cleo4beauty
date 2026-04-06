@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Products CLÉO</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -16,31 +17,34 @@
 </nav>
 
 <h1>Our Products</h1>
-<div class="product-grid">
-  <div class="product-card">
-    <img src="images/foundation.jpg" alt="Foundation">
-    <h3>Foundation</h3>
-    <p>RM45</p>
-    <button onclick="addToCart('Foundation', 45)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="images/lipstick.jpg" alt="Lipstick">
-    <h3>Lipstick</h3>
-    <p>RM30</p>
-    <button onclick="addToCart('Lipstick', 30)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="images/blusher.jpg" alt="Blusher">
-    <h3>Blusher</h3>
-    <p>RM25</p>
-    <button onclick="addToCart('Blusher', 25)">Add to Cart</button>
-  </div>
+
+<div class="product">
+  <h2>Foundation</h2>
+  <img src="images/foundation.jpg" width="200">
+  <p>Lightweight and long-lasting foundation.</p>
+  <p>Price: RM50</p>
+  <button onclick="addToCart('Foundation', 50)">Add to Cart</button>
 </div>
 
-<script>
-function addToCart(name, price){
-  alert(name + " added to cart! Price: RM" + price);
-}
-</script>
+<div class="product">
+  <h2>Lipstick</h2>
+  <img src="images/lipstick.jpg" width="200">
+  <p>Rich color with smooth texture.</p>
+  <p>Price: RM30</p>
+  <button onclick="addToCart('Lipstick', 30)">Add to Cart</button>
+</div>
+
+<div class="product">
+  <h2>Blusher</h2>
+  <img src="images/blusher.jpg" width="200">
+  <p>Natural glow for your cheeks.</p>
+  <p>Price: RM40</p>
+  <button onclick="addToCart('Blusher', 40)">Add to Cart</button>
+</div>
+
+<h2>Cart: <span id="cart-count">0</span> items</h2>
+<h2>Total: RM<span id="cart-total">0</span></h2>
+
+<script src="js/cart.js"></script>
 </body>
 </html>
